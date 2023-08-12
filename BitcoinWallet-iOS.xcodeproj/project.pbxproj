@@ -11,6 +11,11 @@
 		E7BCF14B2A829A77003CE0CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF14A2A829A77003CE0CD /* ContentView.swift */; };
 		E7BCF14D2A829A79003CE0CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BCF14C2A829A79003CE0CD /* Assets.xcassets */; };
 		E7BCF1502A829A79003CE0CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BCF14F2A829A79003CE0CD /* Preview Assets.xcassets */; };
+		E7BCF1582A82F92A003CE0CD /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF1572A82F92A003CE0CD /* ExchangeRates.swift */; };
+		E7BCF15C2A82FB18003CE0CD /* ExchangeRatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF15B2A82FB18003CE0CD /* ExchangeRatesManager.swift */; };
+		E7BCF15F2A830396003CE0CD /* Content-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF15E2A830396003CE0CD /* Content-ViewModel.swift */; };
+		E7BCF1612A86D298003CE0CD /* FluctuationRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF1602A86D298003CE0CD /* FluctuationRates.swift */; };
+		E7BCF1652A86D7F2003CE0CD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF1642A86D7F2003CE0CD /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		E7BCF14A2A829A77003CE0CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7BCF14C2A829A79003CE0CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7BCF14F2A829A79003CE0CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7BCF1572A82F92A003CE0CD /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
+		E7BCF15B2A82FB18003CE0CD /* ExchangeRatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesManager.swift; sourceTree = "<group>"; };
+		E7BCF15E2A830396003CE0CD /* Content-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content-ViewModel.swift"; sourceTree = "<group>"; };
+		E7BCF1602A86D298003CE0CD /* FluctuationRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluctuationRates.swift; sourceTree = "<group>"; };
+		E7BCF1642A86D7F2003CE0CD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +61,10 @@
 		E7BCF1472A829A77003CE0CD /* BitcoinWallet-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E7BCF1622A86D7C9003CE0CD /* Helpers */,
 				E7BCF1482A829A77003CE0CD /* BitcoinWallet_iOSApp.swift */,
-				E7BCF14A2A829A77003CE0CD /* ContentView.swift */,
+				E7BCF15D2A83036B003CE0CD /* ContentView */,
+				E7BCF1592A82FADF003CE0CD /* API */,
 				E7BCF14C2A829A79003CE0CD /* Assets.xcassets */,
 				E7BCF14E2A829A79003CE0CD /* Preview Content */,
 			);
@@ -65,6 +77,57 @@
 				E7BCF14F2A829A79003CE0CD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7BCF1562A82F8EB003CE0CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7BCF1572A82F92A003CE0CD /* ExchangeRates.swift */,
+				E7BCF1602A86D298003CE0CD /* FluctuationRates.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E7BCF1592A82FADF003CE0CD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E7BCF15A2A82FAF5003CE0CD /* Manager */,
+				E7BCF1562A82F8EB003CE0CD /* Models */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E7BCF15A2A82FAF5003CE0CD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E7BCF15B2A82FB18003CE0CD /* ExchangeRatesManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E7BCF15D2A83036B003CE0CD /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				E7BCF14A2A829A77003CE0CD /* ContentView.swift */,
+				E7BCF15E2A830396003CE0CD /* Content-ViewModel.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		E7BCF1622A86D7C9003CE0CD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E7BCF1632A86D7D7003CE0CD /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E7BCF1632A86D7D7003CE0CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E7BCF1642A86D7F2003CE0CD /* DateExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +201,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BCF14B2A829A77003CE0CD /* ContentView.swift in Sources */,
+				E7BCF1652A86D7F2003CE0CD /* DateExtension.swift in Sources */,
+				E7BCF1582A82F92A003CE0CD /* ExchangeRates.swift in Sources */,
+				E7BCF15C2A82FB18003CE0CD /* ExchangeRatesManager.swift in Sources */,
+				E7BCF15F2A830396003CE0CD /* Content-ViewModel.swift in Sources */,
+				E7BCF1612A86D298003CE0CD /* FluctuationRates.swift in Sources */,
 				E7BCF1492A829A77003CE0CD /* BitcoinWallet_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
