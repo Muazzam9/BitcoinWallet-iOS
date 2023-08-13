@@ -1,6 +1,7 @@
 import Foundation
 
 public enum Environment {
+    
     enum keys {
         static let fixerApiKey = "FIXER_API_KEY"
     }

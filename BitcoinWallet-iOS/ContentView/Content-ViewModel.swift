@@ -26,7 +26,8 @@ extension ContentView {
         
         func updateAmount(_ newAmount: Double) {
             amount = newAmount
-            saveAmount() // Save the updated amount
+            // Save the updated amount
+            saveAmount()
         }
         
         func calculate(rate: Rates, currency: String) -> Double {
@@ -38,12 +39,14 @@ extension ContentView {
             case "AUD":
                 return (amount ?? 0.0) * rate.aud
             default:
-                return 0.0 // Handle unknown currency
+                // Handle unknown currency
+                return 0.0
             }
         }
         
+        // Function used to get most up to date
         func refreshData() {
-            let walletAPI = WalletAPI() // Create an instance of WalletAPI
+            let walletAPI = WalletAPI()
 #if DEBUG
             walletAPI.fetchDummyData { dummyRates in
                 DispatchQueue.main.async {

@@ -8,7 +8,12 @@ struct Fluctuation: Codable {
     let rates: [String: FluctuationRate]
     
     private enum CodingKeys: String, CodingKey {
-        case success, fluctuation, startDate = "start_date", endDate = "end_date", base, rates
+        case success
+        case fluctuation
+        case startDate = "start_date"
+        case endDate = "end_date"
+        case base
+        case rates
     }
 }
 
@@ -19,6 +24,9 @@ struct FluctuationRate: Codable {
     let changePct: Double
     
     private enum CodingKeys: String, CodingKey {
-        case startRate = "start_rate", endRate = "end_rate", change, changePct = "change_pct"
+        case startRate = "start_rate"
+        case endRate = "end_rate"
+        case change
+        case changePct = "change_pct"
     }
 }

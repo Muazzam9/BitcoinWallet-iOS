@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var vm = ViewModel(rates: Rates(zar: 0, usd: 0, aud: 0)) // Initialize with 0 rates
+    // Initialize ViewModel with 0 rates
+    @StateObject private var vm = ViewModel(rates: Rates(zar: 0, usd: 0, aud: 0))
     
     var body: some View {
         NavigationView {
