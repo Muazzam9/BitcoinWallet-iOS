@@ -44,7 +44,7 @@ To use the Fixer API, you need to set up your API key:
 3. Set your API key as an environment variable in the config file named `FIXER_API_KEY` in Xcode.
 
 ## Debug vs. Release Methods
-In your ViewModel class, you have a refreshData() method that fetches data from the API. Depending on whether you're building in a debug or release configuration, this method will use either real data from the API or dummy data.
+In the ViewModel class, you have a refreshData() method that fetches data from the API. Depending on whether you're building in a debug or release configuration, this method will use either real data from the API or dummy data.
 
 ### Debug Configuration:
 In the debug configuration, you fetch dummy data. This is helpful during development and testing when you want to avoid using up your API call limit.
