@@ -1,5 +1,7 @@
 # Bitcoin Wallet App
 ![simulator_screenshot_21CCDB7B-E7ED-4EE7-9044-AF91AE54EF7A](https://github.com/Muazzam9/BitcoinWallet-iOS/assets/58729460/f9c9130f-19d9-435a-8a59-af1f21066094)
+https://github.com/Muazzam9/BitcoinWallet-iOS/assets/58729460/dd0e2ba5-aa67-4a90-82f0-0ae27f52e924
+
 
 Welcome to the **Bitcoin Wallet App**! This is a simple iOS application built using Swift and SwiftUI that helps you keep track of your Bitcoin investments and their value in different currencies.
 
