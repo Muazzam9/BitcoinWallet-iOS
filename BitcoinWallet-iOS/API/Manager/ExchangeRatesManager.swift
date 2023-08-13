@@ -4,7 +4,7 @@ class WalletAPI {
     
     let symbols = "ZAR,USD,AUD"
     let base = "BTC"
-    let apiKey = "" //add api key 
+    let apiKey = Environment.fixerApiKey
     let baseUrlString = "https://api.apilayer.com/fixer"
     
     func fetchDummyData(_ completion: @escaping (Rates) -> Void) {
@@ -47,7 +47,7 @@ class WalletAPI {
         
         let today = dateFormatter.string(from: Date())
         let yesterday = dateFormatter.string(from: Date().dayBefore)
-        let fluctuationUrlString = baseUrlString + "/fluctuation?start_date=\(yesterday)&end_date=\(today)&symbols=\(symbols)"
+        let fluctuationUrlString = baseUrlString + "/fluctuation?start_date=\(yesterday)&end_date=\(today)&symbols=\(symbols)&base=\(base)"
 
     //        Test previous date calc with hardcoded current date
     //        let testDate = dateFormatter.date(from: "2023-08-01")!

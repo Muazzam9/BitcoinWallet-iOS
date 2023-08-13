@@ -8,14 +8,14 @@ struct ContentView: View {
             VStack {
                 HStack {
                     TextField("Enter bitcoin amount", value: $vm.amount, format: .number)
-                                    .textFieldStyle(.roundedBorder)
-                                    .padding()
-                                    .onChange(of: vm.amount) { newValue in
-                                        vm.updateAmount(newValue)}
+                        .textFieldStyle(.roundedBorder)
+                        .padding()
+                        .onChange(of: vm.amount ?? 0.0) { newValue in
+                            vm.updateAmount(newValue)}
                     Text("BTC")
                 }
                 .padding()
-
+                
                 List {
                     ForEach(vm.rates.currencies, id: \.self) { currency in
                         HStack {
@@ -24,13 +24,8 @@ struct ContentView: View {
                             Spacer()
                             Text("\(vm.calculate(rate: vm.rates, currency: currency), specifier: "%.2f")")
                                 .padding()
-                            if vm.fluctuationRates[currency]?.changePct ?? 0.0 > 0 {
-                                Text("\(vm.fluctuationRates[currency]?.changePct ?? 0.0)%")
-                                .foregroundColor(.green)
-                            } else {
-                                Text("\(vm.fluctuationRates[currency]?.changePct ?? 0.0)%")
-                                .foregroundColor(.red)
-                            }
+                            Text(String(format: "%.2f%%", vm.fluctuationRates[currency]?.changePct ?? 0.0))
+                                .foregroundColor(vm.fluctuationRates[currency]?.changePct ?? 0.0 > 0 ? .green : .red)
                         }
                     }
                 }
@@ -50,11 +45,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-extension Rates {
-    var currencies: [String] {
-        return ["ZAR", "USD", "AUD"]
     }
 }

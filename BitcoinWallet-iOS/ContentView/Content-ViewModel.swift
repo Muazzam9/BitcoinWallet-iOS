@@ -1,10 +1,3 @@
-//
-//  Content-ViewModel.swift
-//  BitcoinWallet-iOS
-//
-//  Created by Muazzam.Aziz on 2023/08/09.
-//
-
 import Foundation
 import SwiftUI
 
@@ -12,7 +5,7 @@ extension ContentView {
     class ViewModel: ObservableObject {
         @Published var rates: Rates
         @Published var fluctuationRates: [String: FluctuationRate]
-        @Published var amount = 0.0
+        @Published var amount: Double?
         
         init(rates: Rates) {
             self.rates = rates
@@ -39,11 +32,11 @@ extension ContentView {
         func calculate(rate: Rates, currency: String) -> Double {
             switch currency {
             case "ZAR":
-                return amount * rate.zar
+                return (amount ?? 0.0) * rate.zar
             case "USD":
-                return amount * rate.usd
+                return (amount ?? 0.0) * rate.usd
             case "AUD":
-                return amount * rate.aud
+                return (amount ?? 0.0) * rate.aud
             default:
                 return 0.0 // Handle unknown currency
             }

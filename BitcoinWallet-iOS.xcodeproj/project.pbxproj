@@ -16,6 +16,8 @@
 		E7BCF15F2A830396003CE0CD /* Content-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF15E2A830396003CE0CD /* Content-ViewModel.swift */; };
 		E7BCF1612A86D298003CE0CD /* FluctuationRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF1602A86D298003CE0CD /* FluctuationRates.swift */; };
 		E7BCF1652A86D7F2003CE0CD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF1642A86D7F2003CE0CD /* DateExtension.swift */; };
+		E7BCF1702A88E796003CE0CD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF16F2A88E796003CE0CD /* Environment.swift */; };
+		E7BCF1732A89250B003CE0CD /* RatesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF1722A89250B003CE0CD /* RatesExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		E7BCF15E2A830396003CE0CD /* Content-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content-ViewModel.swift"; sourceTree = "<group>"; };
 		E7BCF1602A86D298003CE0CD /* FluctuationRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluctuationRates.swift; sourceTree = "<group>"; };
 		E7BCF1642A86D7F2003CE0CD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		E7BCF16E2A88E780003CE0CD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		E7BCF16F2A88E796003CE0CD /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		E7BCF1712A88E920003CE0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E7BCF1722A89250B003CE0CD /* RatesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +67,15 @@
 		E7BCF1472A829A77003CE0CD /* BitcoinWallet-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E7BCF1712A88E920003CE0CD /* Info.plist */,
 				E7BCF1622A86D7C9003CE0CD /* Helpers */,
 				E7BCF1482A829A77003CE0CD /* BitcoinWallet_iOSApp.swift */,
 				E7BCF15D2A83036B003CE0CD /* ContentView */,
 				E7BCF1592A82FADF003CE0CD /* API */,
 				E7BCF14C2A829A79003CE0CD /* Assets.xcassets */,
 				E7BCF14E2A829A79003CE0CD /* Preview Content */,
+				E7BCF16E2A88E780003CE0CD /* Config.xcconfig */,
+				E7BCF16F2A88E796003CE0CD /* Environment.swift */,
 			);
 			path = "BitcoinWallet-iOS";
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				E7BCF1642A86D7F2003CE0CD /* DateExtension.swift */,
+				E7BCF1722A89250B003CE0CD /* RatesExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,8 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BCF14B2A829A77003CE0CD /* ContentView.swift in Sources */,
+				E7BCF1702A88E796003CE0CD /* Environment.swift in Sources */,
 				E7BCF1652A86D7F2003CE0CD /* DateExtension.swift in Sources */,
 				E7BCF1582A82F92A003CE0CD /* ExchangeRates.swift in Sources */,
+				E7BCF1732A89250B003CE0CD /* RatesExtension.swift in Sources */,
 				E7BCF15C2A82FB18003CE0CD /* ExchangeRatesManager.swift in Sources */,
 				E7BCF15F2A830396003CE0CD /* Content-ViewModel.swift in Sources */,
 				E7BCF1612A86D298003CE0CD /* FluctuationRates.swift in Sources */,
@@ -275,6 +287,7 @@
 		};
 		E7BCF1522A829A79003CE0CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7BCF16E2A88E780003CE0CD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -337,6 +350,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BitcoinWallet-iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BitcoinWallet-iOS/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -365,6 +380,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BitcoinWallet-iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BitcoinWallet-iOS/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
