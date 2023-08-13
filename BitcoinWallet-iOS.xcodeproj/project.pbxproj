@@ -18,6 +18,8 @@
 		E7BCF1652A86D7F2003CE0CD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF1642A86D7F2003CE0CD /* DateExtension.swift */; };
 		E7BCF1702A88E796003CE0CD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF16F2A88E796003CE0CD /* Environment.swift */; };
 		E7BCF1732A89250B003CE0CD /* RatesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF1722A89250B003CE0CD /* RatesExtension.swift */; };
+		E7BCF1792A8967F6003CE0CD /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF1782A8967F6003CE0CD /* LaunchScreenView.swift */; };
+		E7BCF17B2A896C65003CE0CD /* ColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BCF17A2A896C65003CE0CD /* ColourExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		E7BCF16F2A88E796003CE0CD /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		E7BCF1712A88E920003CE0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E7BCF1722A89250B003CE0CD /* RatesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesExtension.swift; sourceTree = "<group>"; };
+		E7BCF1782A8967F6003CE0CD /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		E7BCF17A2A896C65003CE0CD /* ColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			children = (
 				E7BCF14A2A829A77003CE0CD /* ContentView.swift */,
 				E7BCF15E2A830396003CE0CD /* Content-ViewModel.swift */,
+				E7BCF1782A8967F6003CE0CD /* LaunchScreenView.swift */,
 			);
 			path = ContentView;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			children = (
 				E7BCF1642A86D7F2003CE0CD /* DateExtension.swift */,
 				E7BCF1722A89250B003CE0CD /* RatesExtension.swift */,
+				E7BCF17A2A896C65003CE0CD /* ColourExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,8 +221,10 @@
 				E7BCF1652A86D7F2003CE0CD /* DateExtension.swift in Sources */,
 				E7BCF1582A82F92A003CE0CD /* ExchangeRates.swift in Sources */,
 				E7BCF1732A89250B003CE0CD /* RatesExtension.swift in Sources */,
+				E7BCF1792A8967F6003CE0CD /* LaunchScreenView.swift in Sources */,
 				E7BCF15C2A82FB18003CE0CD /* ExchangeRatesManager.swift in Sources */,
 				E7BCF15F2A830396003CE0CD /* Content-ViewModel.swift in Sources */,
+				E7BCF17B2A896C65003CE0CD /* ColourExtension.swift in Sources */,
 				E7BCF1612A86D298003CE0CD /* FluctuationRates.swift in Sources */,
 				E7BCF1492A829A77003CE0CD /* BitcoinWallet_iOSApp.swift in Sources */,
 			);

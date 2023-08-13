@@ -4,7 +4,7 @@ import SwiftUI
 struct BitcoinWallet_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchScreenView()
         }
     }
 }

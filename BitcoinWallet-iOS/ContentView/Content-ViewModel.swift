@@ -72,9 +72,9 @@ extension ContentView {
                     if let zarChangePct = self.fluctuationRates["ZAR"]?.changePct,
                        let usdChangePct = self.fluctuationRates["USD"]?.changePct,
                        let audChangePct = self.fluctuationRates["AUD"]?.changePct {
-                        print("Successfully got fluctuationRates: ZAR \(zarChangePct), USD \(usdChangePct), AUD \(audChangePct)")
+                        print("Successfully got Fluctuation Rates: ZAR \(zarChangePct), USD \(usdChangePct), AUD \(audChangePct)")
                     } else {
-                        print("Failed to get fluctuationRates")
+                        print("Failed to get Fluctuation Rates")
                     }
                 }
             }
