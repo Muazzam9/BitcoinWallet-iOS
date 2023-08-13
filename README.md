@@ -41,7 +41,7 @@ To use the Fixer API, you need to set up your API key:
 
 1. Sign up for an account on the Fixer API website.
 2. Obtain your API key from your account dashboard.
-3. Set your API key as an environment variable in the config file named `FIXER_API_KEY` in Xcode.
+3. Set your API key as an environment variable in the config file named `FIXER_API_KEY` in Xcode. e.g FIXER_API_KEY = 12345ABCDE (not as a string)
 
 ## Debug vs. Release Methods
 In the ViewModel class, you have a refreshData() method that fetches data from the API. Depending on whether you're building in a debug or release configuration, this method will use either real data from the API or dummy data.
@@ -82,8 +82,6 @@ By switching the scheme between debug and release, you can control whether your 
 This app is created by Mu'azzam Aziz.
 
 ## Screen Recording
-
-
 
 https://github.com/Muazzam9/BitcoinWallet-iOS/assets/58729460/105c6a37-eeaa-4d6f-99a1-b7c458b6e993
 
